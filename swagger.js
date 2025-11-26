@@ -11,8 +11,8 @@ const doc = {
  * host: 'https://holidaypartymanager.onrender.com'
  * schemes: ['https'] -vy
  *******************************************/
-    host: 'localhost:3000',
-    schemes: ['http']
+    host: 'https://cse341-final-project-4au6.onrender.com',
+    schemes: ['http', 'https']
 };
 
 const outputFile = './swagger.json';
