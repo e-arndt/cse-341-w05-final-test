@@ -23,6 +23,8 @@ const doc = {
       description: 'Endpoints for managing dishes/food'
     }
   ]
+    host: 'https://cse341-final-project-4au6.onrender.com',
+    schemes: ['http', 'https']
 };
 
 const outputFile = './swagger.json';
