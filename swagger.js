@@ -1,4 +1,5 @@
 const swaggerAutogen = require('swagger-autogen')();
+const production = process.env.NODE_ENV === 'production';
 
 const doc = {
     info: {
@@ -7,12 +8,13 @@ const doc = {
     },
   
 /* ******************************************
- * Before deploy on Render, we need to change
- * host: 'https://holidaypartymanager.onrender.com'
- * schemes: ['https'] -vy
+ * Trying to see if this change will automatically
+ * update the swagger.json file on render.com -vy
  *******************************************/
-    host: 'localhost:3000',
-    schemes: ['http'],
+  host: production
+    ? 'https://cse341-final-project-4au6.onrender.com'
+    : 'localhost:3000',
+    schemes: production ? ['https']: ['http' ],
     tags: [
     {
       name: 'Gifts',
@@ -23,8 +25,6 @@ const doc = {
       description: 'Endpoints for managing dishes/food'
     }
   ]
-    host: 'https://cse341-final-project-4au6.onrender.com',
-    schemes: ['http', 'https']
 };
 
 const outputFile = './swagger.json';
