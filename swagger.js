@@ -10,11 +10,15 @@ const doc = {
 /* ******************************************
  * Trying to see if this change will automatically
  * update the swagger.json file on render.com -vy
- *******************************************/
-  host: production
+ * 
+ * Had to remove host and schemes to get it to work on render
+ * 
+ * host: production
     ? 'cse-341-w05-final-test.onrender.com'
     : 'localhost:3000',
     schemes: production ? ['https']: ['http' ],
+ *******************************************/
+  
     tags: [
     {
       name: 'Gifts',
